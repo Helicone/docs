@@ -16,38 +16,26 @@ const navigation = [
     title: 'Introduction',
     links: [
       { title: 'Getting started', href: '/' },
-      { title: 'Generating API keys', href: '/docs/installation' },
-      { title: 'Web UI', href: '/docs/web-ui' },
+      { title: 'Generating API keys', href: '/docs/generating-api-keys' },
     ],
   },
   {
-    title: 'How does Bhunkio work?',
+    title: 'How Bhunkio works',
     links: [
       {
-        title: 'Self hosted vs Cloud?',
-        href: '/docs/predicting-user-behavior',
+        title: 'Self hosted vs Cloud?', href: '/docs/self-hosted-vs-cloud',
       },
-      { title: 'Scale up strategy', href: '/docs/basics-of-time-travel' },
       { title: 'End to end encryption', href: '/docs/understanding-caching' },
     ],
   },
   {
-    title: 'API reference',
+    title: 'Developer',
     links: [
-      { title: 'Add prompt', href: '/docs/cacheadvance-predict' },
-      { title: '', href: '/docs/cacheadvance-flush' },
-      { title: 'CacheAdvance.revert()', href: '/docs/cacheadvance-revert' },
-      { title: 'CacheAdvance.regret()', href: '/docs/cacheadvance-regret' },
+      { title: 'API Reference', href: '/docs/cacheadvance-predict' },
+      { title: 'Running your own client', href: '/docs/cacheadvance-flush' },
     ],
   },
-  {
-    title: 'Running a client',
-    links: [
-      { title: 'Host yourself', href: '/docs/writing-plugins' },
-      { title: 'Running on Lambda Labs', href: '/docs/neuralink-integration' },
-      { title: 'Running on Runpods', href: '/docs/temporal-paradoxes' },
-    ],
-  },
+
 
   {
     title: 'Contributing',
