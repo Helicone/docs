@@ -10,9 +10,9 @@ Quickly get started using Bhunkio and get read to ship your product across the w
 
 ## How bunkio works
 
-Bhunkio provides a similar user experience as [Dream Studio](https://beta.dreamstudio.ai/dream), however we give power to the user and offer a low barrier to entry while empowering users to scale their products built on top of Stable Diffusion.
+Bhunkio provides a similar user experience as [Dream Studio](https://beta.dreamstudio.ai/dream), however we provide free and open source tools that allow users to quickly get started building their own products that can easily scale.
 
-We do this by allowing you to request any image generation request, and having it either run on any of your [client nodes](/docs/writing-plugins) or on our [cloud platform](https://bhunk.io/cloud-platform).
+We do this by allowing all requests to run on your own [client node](/docs/writing-plugins) or on our [cloud platform](https://bhunk.io/cloud-platform).
 
 ## Using our UI
 

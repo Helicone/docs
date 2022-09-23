@@ -31,8 +31,8 @@ const navigation = [
   {
     title: 'Developer',
     links: [
-      { title: 'API Reference', href: '/docs/cacheadvance-predict' },
-      { title: 'Running your own client', href: '/docs/cacheadvance-flush' },
+      { title: 'GraphQL', href: '/docs/graph-ql' },
+      { title: 'Running your own client', href: '/docs/self-hosted-client' },
     ],
   },
 
