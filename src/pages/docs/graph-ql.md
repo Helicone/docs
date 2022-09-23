@@ -47,7 +47,25 @@ mutation {
 }
 ```
 
-### Get results
+### Get results Audio
+
+```graphql
+{
+  requestedPrompts(limit: 100) {
+    status
+    result {
+      ... on Result_UnknownAudioV0 {
+        id
+        audioFiles {
+          url
+        }
+      }
+    }
+  }
+}
+```
+
+### Get results Stable Diffusion
 
 ```graphql
 {
@@ -60,9 +78,6 @@ mutation {
         images {
           url
         }
-      }
-      ... on Result_Unknown_Audio_V0 {
-        id
       }
     }
   }
