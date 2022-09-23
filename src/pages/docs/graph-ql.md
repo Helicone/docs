@@ -9,6 +9,16 @@ TODO
 
 ## Quick start using GraphQL Playground
 
+### Setup
+
+in https heads add
+
+```json
+{
+  "authorization": "MY KEY"
+}
+```
+
 ### Request an Audio prompt
 
 ```graphql
