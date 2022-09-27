@@ -32,7 +32,7 @@ const navigation = [
     title: 'Developer',
     links: [
       { title: 'GraphQL', href: '/docs/graph-ql' },
-      { title: 'Running your own client', href: '/docs/self-hosted-client' },
+      { title: 'Running your own workers', href: '/docs/self-hosted-client' },
     ],
   },
 

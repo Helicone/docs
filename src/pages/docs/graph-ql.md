@@ -37,12 +37,17 @@ mutation {
 
 ```graphql
 mutation {
-  requestNewPrompt(body: { stableDiffusionV1_4: { prompt: "Elephant!" } }) {
+  requestNewPrompt(
+    body: {
+      stableDiffusionV1_4: {
+        action: txt2img
+        prompt: "blue elephant on a unicycle"
+        steps: 40
+      }
+    }
+  ) {
     id
     prompt
-    user {
-      id
-    }
   }
 }
 ```
