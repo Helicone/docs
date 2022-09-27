@@ -8,7 +8,7 @@ Quickly get started using PromptZero and get read to ship your product across th
 
 ---
 
-## How bunkio works
+## How PromptZero works
 
 PromptZero provides a similar user experience as [Dream Studio](https://beta.dreamstudio.ai/dream), however we provide free and open source tools that allow users to quickly get started building their own products that can easily scale.
 
