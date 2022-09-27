@@ -5,7 +5,7 @@ description:
 
 Configure your own workers and use our API to report back jobs.
 
-The worker graphql endpoint is actually a completely separate GraphQL instance that is hosted at https://bhunk.io/api/worker/graphql.
+The worker graphql endpoint is actually a completely separate GraphQL instance that is hosted at https://promptzero.com/api/worker/graphql.
 
 ## Setup
 
@@ -40,7 +40,7 @@ mutation {
 
 ## Sending back a result
 
-NOTE: The images must be well formatted. Please see the example clients at https://github.com/bhunkio/bhunk.io-client for how to correctly format these images.
+NOTE: The images must be well formatted. Please see the example clients at https://github.com/PromptZero/worker for how to correctly format these images.
 
 ```graphql
 mutation {

@@ -11,16 +11,16 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 
-const pythonCode = `import bhunkio
-client = bhunkio('API_KEY')
+const pythonCode = `import prompt_zero
+client = prompt_zero('API_KEY')
 request = client.request_job('Elephant', dim_step=50)
 images = client.results(request.uuid, wait=true)
 print(images)
 # links to images`
 
 
-const typescriptCode = `import bhunkio from '@bhunkio'
-const client = bhunkio('API_KEY');
+const typescriptCode = `import prompt_zero from '@prompt_zero'
+const client = prompt_zero('API_KEY');
 client
     .request_job('Elephant', dim_step=50)
     .then((images) => console.log(images));

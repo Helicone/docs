@@ -20,7 +20,7 @@ const navigation = [
     ],
   },
   {
-    title: 'How Bhunkio works',
+    title: 'How PromptZero works',
     links: [
       {
         title: 'Self hosted vs Cloud?', href: '/docs/self-hosted-vs-cloud',
@@ -100,7 +100,7 @@ function Header({ navigation }) {
         <Link href="https://discord.gg/u7NkZa6pxb" className="group" aria-label="GitHub">
           <DiscordIcon className="h-7 w-7 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
         </Link>
-        <Link href="https://github.com/bhunkio/docs" className="group" aria-label="Discord">
+        <Link href="https://github.com/PromptZero/docs" className="group" aria-label="Discord">
           <GitHubIcon className="h-6 w-6 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300" />
         </Link>
         
