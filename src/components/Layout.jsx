@@ -16,22 +16,18 @@ const navigation = [
     title: 'Introduction',
     links: [
       { title: 'Getting started', href: '/' },
-      { title: 'Generating API keys', href: '/docs/generating-api-keys' },
-    ],
-  },
-  {
-    title: 'How PromptZero works',
-    links: [
       {
-        title: 'Self hosted vs Cloud?', href: '/docs/self-hosted-vs-cloud',
+        title: 'Self hosted vs Cloud', href: '/docs/self-hosted-vs-cloud',
       },
-      { title: 'End to end encryption', href: '/docs/understanding-caching' },
+      
     ],
   },
   {
     title: 'Developer',
     links: [
+      { title: 'Generating API keys', href: '/docs/generating-api-keys' },
       { title: 'GraphQL', href: '/docs/graph-ql' },
+      { title: 'Typescript', href: '/docs/typescript' },
       { title: 'Running your own workers', href: '/docs/self-hosted-client' },
     ],
   },

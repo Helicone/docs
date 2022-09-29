@@ -11,7 +11,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 
-const pythonCode = `import prompt_zero
+const pythonCode = `import promptzero
 client = prompt_zero('API_KEY')
 request = client.request_job('Elephant', dim_step=50)
 images = client.results(request.uuid, wait=true)
@@ -19,14 +19,27 @@ print(images)
 # links to images`
 
 
-const typescriptCode = `import prompt_zero from '@prompt_zero'
-const client = prompt_zero('API_KEY');
-client
-    .request_job('Elephant', dim_step=50)
-    .then((images) => console.log(images));
-# links to images`
+const typescriptCode = `import { PromptZero } from "promptzero";
+const client = new PromptZero("<KEY>");
+const prompt = await client.requestNewPrompt("cheese");
+const id = prompt.data.requestNewPrompt.id;
+const result = await promptZero.getPromptResult(id);
+console.log(result.data.requestedPrompt.result.images);`
 
-const curlCode = `curl `
+const graphqlCode = `mutation {
+  requestNewPrompt(
+    body: {
+      stableDiffusionV1_4: {
+        action: txt2img
+        prompt: "blue elephant on a unicycle"
+      }
+    }
+  ) {
+    id
+    prompt
+  }
+}
+`
 
 
 function TrafficLightsIcon(props) {
@@ -40,12 +53,12 @@ function TrafficLightsIcon(props) {
 }
 
 export function Hero() {
-  const [activeCodeTab, setActiveCodeTab] = useState('python');
+  const [activeCodeTab, setActiveCodeTab] = useState('graphql');
   const router = useRouter();
   const tabs = {
-    'python': { code: pythonCode, language: 'python'},
-    'typescript': {code: typescriptCode, language: 'typescript'},
-    'curl': {code: curlCode, language: 'bash'}
+    'graphql': {code: graphqlCode, language: 'graphql'},
+    'typescript': {code: typescriptCode, language: 'typescript'}
+    // 'python': { code: pythonCode, language: 'python'}
 
   }
   

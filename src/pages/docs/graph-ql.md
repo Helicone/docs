@@ -1,17 +1,19 @@
 ---
-title: Access Bhunkio using GraphQL
-description: Quidem magni aut exercitationem maxime rerum eos.
+title: Access PromptZero using GraphQL
+description:
 ---
-
-## What is GraphQL?
-
-TODO
 
 ## Quick start using GraphQL Playground
 
+Visit the PromptZero [playground](https://promptzero.com/api/graphql) to get started.
+
+{% callout link="kjasd" type="note" title="Pro tip" %}
+`ctrl`+`space bar`in the playground to open intellisense.
+{% /callout %}
+
 ### Setup
 
-in https heads add
+In the bottom of the playground add your authorization header.
 
 ```json
 {
@@ -19,21 +21,7 @@ in https heads add
 }
 ```
 
-### Request an Audio prompt
-
-```graphql
-mutation {
-  requestNewPrompt(body: { unknownAudioV0: { prompt: "my new song" } }) {
-    id
-    prompt
-    user {
-      id
-    }
-  }
-}
-```
-
-### Request an Image prompt
+### Request an Stable Diffusion Image
 
 ```graphql
 mutation {
@@ -42,7 +30,6 @@ mutation {
       stableDiffusionV1_4: {
         action: txt2img
         prompt: "blue elephant on a unicycle"
-        steps: 40
       }
     }
   ) {
@@ -52,35 +39,26 @@ mutation {
 }
 ```
 
-### Get results Audio
+### Get the most recent results
 
 ```graphql
 {
-  requestedPrompts(limit: 100) {
-    status
-    result {
-      ... on Result_UnknownAudioV0 {
-        id
-        audioFiles {
-          url
-        }
-      }
-    }
-  }
-}
-```
-
-### Get results Stable Diffusion
-
-```graphql
-{
-  requestedPrompts(limit: 100) {
+  requestedPrompts(
+    limit: 100
+    orderBy: { orderBy: CreatedAt, direction: Dsc }
+  ) {
     status
     result {
       ... on Result_StableDiffusionV1_4 {
         __typename
         id
         images {
+          url
+        }
+      }
+      ... on Result_UnknownAudioV0 {
+        id
+        audioFiles {
           url
         }
       }
