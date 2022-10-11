@@ -18,7 +18,7 @@ The cloud platform is a pay as you go model, where you simply just pay for the t
 
 ## Self hosted
 
-PromptZero open sources it's workers, and allows it's users to host their own infrastructure with their own workers. This means if you have an extra GPU lying around or if you wanna use a cloud worker like RunPods or Lambda Labs you can do so.
+PromptZero open sources its workers, and allows it's users to host their own infrastructure with their own workers. This means if you have an extra GPU lying around or if you wanna use a cloud worker like RunPods or Lambda Labs you can do so.
 
 ### Free market competition
 
