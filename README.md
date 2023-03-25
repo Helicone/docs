@@ -1,27 +1,42 @@
-# PromptZero Docs
+---
+description: ⚡️The open-source Observability Platform for GPT-3 Users ⚡️
+---
 
-These are the official docs for [PromptZero](https://www.promptzero.com) and are hosted on [docs.promptzero.com](https://docs.promptzero.com).
+# Helicone
 
-# Syntax
+<div>
 
-Syntax is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
+<figure><img src=".gitbook/assets/Screen Shot 2023-02-20 at 7.37.58 PM.png" alt=""><figcaption></figcaption></figure>
 
-## Getting started
+ 
 
-Next, run the development server:
+<figure><img src=".gitbook/assets/Screen Shot 2023-02-20 at 7.41.37 PM.png" alt=""><figcaption></figcaption></figure>
 
-```bash
-npm run dev
-or
-yarn dev
-```
+</div>
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+### What is Helicone
 
-## Contributing
+#### Helicone tracks the usage, latency, and cost of your GPT-3 requests
 
-Pull requests are welcomed and encouraged! 🚀
+* **Easy to integrate**, requiring only **one line of code** to be added.
+* Provides a **user-friendly dashboard** for **visualizing logs and metrics**.
+* Segments your metrics by **prompts,** **users,** and **models**
 
-## License
+### Why Helicone
 
-This site uses the MIT Licenses and uses a commercial tailwind template, and complies with the [Tailwind UI license](https://tailwindui.com/license).
+* Visualize requests, including **conversations** or **chained prompts**
+* Understand how **latency varies throughout the day** and when **rate limits** are hit
+* Identify users with **disproportional usage costs**
+* Bill users by **OpenAI usage** as a pricing model
+* Slice metrics by prompts, finetuned models, or API keys
+
+### How Helicone works
+
+Helicone is a proxy server for executing OpenAI completions queries on your behalf, logging useful stats about your request such as the latency, result, and cost to a database.&#x20;
+
+Our workers are secured by Cloudflare to ensure you are getting the best latency on your requests, wherever you are in the world. [Read more.](https://docs.helicone.ai/getting-started/how-latency-is-affected)
+
+You may use our hosted solution as the proxy or self-host workers in your own environment for free!
+
+
+
