@@ -19,3 +19,7 @@
 
 * [Encryption and security](how-it-works/encryption-and-security.md)
 * [Latency](how-it-works/latency.md)
+
+## Community
+
+* [Monitor all local traffic](community/monitor-all-local-traffic.md)
