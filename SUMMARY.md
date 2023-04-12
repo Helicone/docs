@@ -8,18 +8,13 @@
 
 ## 💡 Advanced Usage
 
-* [Custom Properties](advanced-usage/custom-properties.md)
-* [User Metrics](advanced-usage/user-metrics.md)
+* [Custom properties](advanced-usage/custom-properties.md)
+* [User metrics](advanced-usage/user-metrics.md)
 * [Templated prompts](advanced-usage/templated-prompts.md)
 * [Caching](advanced-usage/caching.md)
-* [Retries](advanced-usage/retries.md)
-* [Get Request Costs](advanced-usage/get-request-costs.md)
+* [Retries](advanced-usage/exponential-backoff-for-rate-limited-requests.md)
 
 ## 🛠 How it works
 
 * [Encryption and security](how-it-works/encryption-and-security.md)
-* [Latency](how-it-works/latency.md)
-
-## Community
-
-* [Monitor all local traffic](community/monitor-all-local-traffic.md)
+* [Latency benchmarks](how-it-works/latency-benchmarks.md)
