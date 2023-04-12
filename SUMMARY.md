@@ -12,7 +12,7 @@
 * [User Metrics](advanced-usage/user-metrics.md)
 * [Templated prompts](advanced-usage/templated-prompts.md)
 * [Caching](advanced-usage/caching.md)
-* [Exponential Backoff for Rate-Limited Requests](advanced-usage/exponential-backoff-for-rate-limited-requests.md)
+* [Retries](advanced-usage/retries.md)
 * [Get Request Costs](advanced-usage/get-request-costs.md)
 
 ## 🛠 How it works
