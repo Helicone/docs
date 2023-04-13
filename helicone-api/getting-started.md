@@ -83,5 +83,9 @@ print(result)
 
 ### Schema Docs
 
+The Schema can be found on the right side of the playground
+
+&#x20;[https://www.helicone.ai/api/graphql](https://www.helicone.ai/api/graphql)
+
 ![](../.gitbook/assets/image.png)
 
