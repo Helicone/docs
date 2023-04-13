@@ -18,3 +18,7 @@
 
 * [Encryption and security](how-it-works/encryption-and-security.md)
 * [Latency benchmarks](how-it-works/latency-benchmarks.md)
+
+## Helicone API
+
+* [Getting started](helicone-api/getting-started.md)
