@@ -13,7 +13,7 @@
 * [Templated prompts](advanced-usage/templated-prompts.md)
 * [Caching](advanced-usage/caching.md)
 * [Retries](advanced-usage/exponential-backoff-for-rate-limited-requests.md)
-* [Custom Rate Limits](advanced-usage/custom-rate-limits.md)
+* [Custom rate limits](advanced-usage/custom-rate-limits.md)
 
 ## 🛠 How it works
 

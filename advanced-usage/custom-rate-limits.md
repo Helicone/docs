@@ -2,7 +2,7 @@
 description: Enforcing custom API usage restrictions with rate limiting
 ---
 
-# Custom Rate Limits
+# Custom rate limits
 
 Rate limits are an important feature that allows you to control the number of requests made with your API key within a specific time window. For example, you can limit users to 1000 requests per day or 60 requests per minute. By implementing rate limits, you can prevent abuse while protecting your resources from being overwhelmed by excessive traffic.
 
@@ -43,7 +43,8 @@ openai.Completion.create(
     model="text-davinci-003",
     prompt="How do I enable retries?",
     headers={
-<strong>      "Helicone-RateLimit-Policy": "1000;w=60;s=ip_address",
+        "Helicone-Property-IP": "111.1.1.1",
+<strong>        "Helicone-RateLimit-Policy": "1000;w=60;s=ip_address",
 </strong>    }
 )
 </code></pre>
@@ -56,6 +57,7 @@ const configuration = new Configuration({
   basePath: "https://oai.hconeai.com/v1",
   baseOptions: {
     headers: {
+      "Helicone-Property-IP": "111.1.1.1",
 <strong>      "Helicone-RateLimit-Policy": "1000;w=60;s=ip_address",
 </strong>    },
   },
