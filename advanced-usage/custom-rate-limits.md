@@ -4,7 +4,7 @@ description: Enforcing custom API usage restrictions with rate limiting
 
 # Custom Rate Limits
 
-Rate limits are an important feature that allows you to control the number of requests made to your API within a specific time window. By implementing rate limits, you can prevent abuse while protecting your resources from being overwhelmed by excessive traffic.
+Rate limits are an important feature that allows you to control the number of requests made with your API key within a specific time window. By implementing rate limits, you can prevent abuse while protecting your resources from being overwhelmed by excessive traffic.
 
 ## Getting Started
 
