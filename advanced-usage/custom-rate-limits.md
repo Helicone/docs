@@ -76,7 +76,7 @@ You can rate limit for all of your requests made with the API key, by user, or b
 * For rate limiting by a custom property, set the segment field to the desired property name in the policy `1000;w=60;s=[property_name]`, and include a corresponding header in the request, formatted as `helicone-property-{property_name}`.
 
 {% hint style="info" %}
-The minimum value for the time window is 60. It is always in seconds (e.g., use 60 \* 60 \* 24 = 86400 for a single day).
+The minimum value for the time window is 60. The only unit for the time window field is seconds, so for example, use 60 \* 60 \* 24 = 86400 for a single day.
 {% endhint %}
 
 ### Examples
