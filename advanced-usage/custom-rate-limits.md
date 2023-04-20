@@ -66,7 +66,7 @@ const openai = new OpenAIApi(configuration);
 {% endtabs %}
 
 {% hint style="info" %}
-Fun fact: this policy format is an [IETF standard](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/) for specifying rate limits! Except for the `segment` field, that's a Helicone special twist :lollipop:
+Fun fact: this policy format is an [IETF standard](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/) for specifying rate limits! Except for the `segment` field, that's a Helicone special twist :candy:
 {% endhint %}
 
 ### Filtering by segments
