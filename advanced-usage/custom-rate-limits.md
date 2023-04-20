@@ -6,6 +6,8 @@ description: Enforcing custom API usage restrictions with rate limiting
 
 Rate limits are an important feature that allows you to control the number of requests made with your API key within a specific time window. By implementing rate limits, you can prevent abuse while protecting your resources from being overwhelmed by excessive traffic.
 
+Keep in mind that your custom rate limiting policy is secondary to OpenAI's rate limits for your key. For more information on OpenAI's rate limits, refer to their documentation [here](https://platform.openai.com/docs/guides/rate-limits).
+
 ## Getting Started
 
 To set up rate limiting, you only need to provide the `Helicone-RateLimit-Policy` header in your request. This will rate limit all requests made with the specified API key.
