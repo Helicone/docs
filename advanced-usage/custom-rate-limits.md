@@ -1,5 +1,5 @@
 ---
-description: Enforcing custom API Usage Restrictions with Rate Limiting
+description: Enforcing custom API usage restrictions with rate limiting
 ---
 
 # Custom Rate Limits
