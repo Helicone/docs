@@ -32,6 +32,29 @@ Change the default base API url to Helicone's
 </strong></code></pre>
 {% endtab %}
 
+{% tab title="Ruby" %}
+Set the client's base URI to Helicone's
+
+
+
+<pre class="language-ruby"><code class="lang-ruby">require "openai"
+
+client = OpenAI::Client.new(
+    access_token: ENV.fetch("OPENAI_ACCESS_TOKEN"),
+    <strong>uri_base: "https://oai.hconeai.com/v1",</strong>
+)</code></pre>
+
+or when configuring the gem:
+
+<pre class="language-ruby"><code class="lang-ruby">require "openai"
+
+OpenAI.configure do |config|
+    config.access_token = ENV.fetch("OPENAI_ACCESS_TOKEN")
+    <strong>config.uri_base = "https://oai.hconeai.com/v1"</strong>
+end</code></pre>
+{% endtab %}
+
+
 {% tab title="Node.js" %}
 Add a `basePath` to the `Configuration:`
 
