@@ -18,7 +18,7 @@ To get started, set `Helicone-Retry-Enabled` to  `true`
 {% tab title="Curl" %}
 <pre class="language-bash"><code class="lang-bash">curl https://oai.hconeai.com/v1/completions \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Helicone-Auth: Bearer YOUR_API_KEY' \
 <strong>  -H 'Helicone-Retry-Enabled: true' \
 </strong>  -d '{
     "model": "text-davinci-003",
@@ -47,6 +47,7 @@ const configuration = new Configuration({
   basePath: "https://oai.hconeai.com/v1",
   baseOptions: {
     headers: {
+      "Helicone-Auth": "Bearer HELICONE_API_KEY",
 <strong>      "Helicone-Retry-Enabled": "true",
 </strong>    },
   },

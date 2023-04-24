@@ -4,7 +4,7 @@ description: >-
   segment, analyze, and visualize by
 ---
 
-# Custom Properties
+# Custom properties
 
 ### What are Custom Properties?
 
@@ -31,7 +31,7 @@ Custom properties are added with headers to your OpenAI requests. For each heade
 {% tab title="Curl" %}
 <pre><code>curl https://oai.hconeai.com/v1/completions \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Helicone-Auth: Bearer HELICONE_API_KEY' \
 <strong>  -H 'Helicone-Property-Session: "24"' \
 </strong><strong>  -H 'Helicone-Property-Conversation: "support_issue_2"' \
 </strong><strong>  -H 'Helicone-Property-App: "mobile"'
@@ -41,11 +41,13 @@ Custom properties are added with headers to your OpenAI requests. For each heade
 
 {% tab title="Python" %}
 <pre class="language-python"><code class="lang-python">openai.api_base = "https://oai.hconeai.com/v1"
+openai
 
 openai.Completion.create(
     model="text-davinci-003",
     prompt="Say this is a test",
     headers={
+        "Helicone-Auth": "Bearer HELICONE_API_KEY"
 <strong>        "Helicone-Property-Session": "24",
 </strong><strong>        "Helicone-Property-Conversation": "support_issue_2",
 </strong><strong>        "Helicone-Property-App": "mobile",
@@ -61,6 +63,7 @@ const configuration = new Configuration({
   basePath: "https://oai.hconeai.com/v1",
   baseOptions: {
     headers: {
+      "Helicone-Auth": "Bearer HELICONE_API_KEY"
 <strong>      "Helicone-Property-Session": "24",
 </strong><strong>      "Helicone-Property-Conversation": "support_issue_2",
 </strong><strong>      "Helicone-Property-App": "mobile",

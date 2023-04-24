@@ -108,6 +108,7 @@ openai.Completion.create(
     model="text-davinci-003",
     prompt="Say this is a test",
     headers={
+        "Helicone-Auth": "Bearer HELICONE_API_KEY",
         "Helicone-Cache-Enabled": "true",
         "Helicone-Cache-Bucket-Max-Size": "5",
     }

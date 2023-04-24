@@ -6,11 +6,11 @@ description: >-
 
 # Integrate in less than a minute
 
-
+First, claim your `HELICONE_API_KEY` by signing up [here](https://www.helicone.ai/), or if you are already signed up, login and go to the [Keys page](https://www.helicone.ai/keys).&#x20;
 
 {% tabs %}
 {% tab title="Curl" %}
-Replace the OpenAI base url
+1. **Replace the OpenAI base url**
 
 ```url
 POST https://api.openai.com/v1
@@ -22,10 +22,10 @@ with Helicone's
 POST https://oai.hconeai.com/v1
 ```
 
-Add the Helicone auth header
+2. **Add the Helicone auth header**
 
 ```
-"Helicone-Auth": "Bearer <Helicone_API_Key>"
+"Helicone-Auth": "Bearer HELICONE_API_KEY"
 ```
 {% endtab %}
 
@@ -40,7 +40,7 @@ Change the default base API url to Helicone's
 </strong>openai.Completion.create(
     # ...other parameters
     headers={
-<strong>      "Helicone-Auth": "Bearer &#x3C;API_KEY>",
+<strong>      "Helicone-Auth": "Bearer HELICONE_API_KEY",
 </strong>    }
 )
 </code></pre>
@@ -56,7 +56,7 @@ const configuration = new Configuration({
 </strong>  {
     headers: {
       // Add your Helicone API Key
-<strong>      "Helicone-Auth": "Bearer &#x3C;API_KEY>",
+<strong>      "Helicone-Auth": "Bearer HELICONE_API_KEY",
 </strong>    },
   }
 });
@@ -78,7 +78,7 @@ Helpful links:
 llm = OpenAI(
   temperature=0.9,
   headers={
-<strong>    "Helicone-Auth": "Bearer &#x3C;API_KEY>"
+<strong>    "Helicone-Auth": "Bearer HELICONE_API_KEY"
 </strong>  }
 )
 </code></pre>
@@ -91,7 +91,7 @@ llm = OpenAI(
 <strong>    basePath: "https://oai.hconeai.com/v1",
 </strong>    baseOptions: {
       headers: {
-<strong>        "Helicone-Auth": "Bearer &#x3C;API_KEY>"
+<strong>        "Helicone-Auth": "Bearer HELICONE_API_KEY"
 </strong>      },
     },
   }

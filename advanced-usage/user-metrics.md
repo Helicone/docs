@@ -2,7 +2,7 @@
 description: Get user metrics like number of requests, costs, and activity
 ---
 
-# User Metrics
+# User metrics
 
 <figure><img src="../.gitbook/assets/users.png" alt=""><figcaption></figcaption></figure>
 
@@ -16,7 +16,7 @@ The OpenAI API has an [optional `user` parameter](https://platform.openai.com/do
 {% tab title="Curl" %}
 <pre class="language-bash"><code class="lang-bash">curl https://oai.hconeai.com/v1/completions \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Helicone-Auth: Bearer HELICONE_API_KEY' \
   -d '{
     "model": "text-davinci-003",
     "prompt": "How do I log users?",
@@ -54,7 +54,7 @@ Alternatively, you can also pass the user ID via headers for Helicone to log. Th
 {% tab title="Curl" %}
 <pre class="language-bash"><code class="lang-bash">curl https://oai.hconeai.com/v1/completions \
   -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Helicone-Auth: Bearer YOUR_API_KEY' \
 <strong>  -H 'Helicone-User-Id: "alicebob@gmail.com"'
 </strong></code></pre>
 {% endtab %}

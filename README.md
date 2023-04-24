@@ -1,5 +1,5 @@
 ---
-description: ⚡️The open-source Observability Platform for GPT-3 Users ⚡️
+description: ⚡️The open-source observability platform for large language models⚡️
 ---
 
 # Helicone
@@ -16,7 +16,7 @@ description: ⚡️The open-source Observability Platform for GPT-3 Users ⚡️
 
 ### What is Helicone
 
-#### Helicone tracks the usage, latency, and cost of your GPT-3 requests
+#### Helicone tracks the usage, latency, and cost of your GPT requests
 
 * **Easy to integrate**, requiring only **one line of code** to be added.
 * Provides a **user-friendly dashboard** for **visualizing logs and metrics**.
