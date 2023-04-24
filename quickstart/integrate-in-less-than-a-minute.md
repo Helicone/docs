@@ -4,7 +4,9 @@ description: >-
   errors, rate limits, and more
 ---
 
-# Integrate in one line of code
+# Integrate in less than a minute
+
+
 
 {% tabs %}
 {% tab title="Curl" %}
@@ -19,6 +21,12 @@ with Helicone's
 ```
 POST https://oai.hconeai.com/v1
 ```
+
+Add the Helicone auth header
+
+```
+"Helicone-Auth": "Bearer <Helicone_API_Key>"
+```
 {% endtab %}
 
 {% tab title="Python" %}
@@ -29,36 +37,29 @@ Change the default base API url to Helicone's
 <pre class="language-python"><code class="lang-python">import openai
 
 <strong>openai.api_base = "https://oai.hconeai.com/v1"
-</strong></code></pre>
+</strong>openai.Completion.create(
+    # ...other parameters
+    headers={
+<strong>      "Helicone-Auth": "Bearer &#x3C;API_KEY>",
+</strong>    }
+)
+</code></pre>
 {% endtab %}
 
 {% tab title="Node.js" %}
-Add a `basePath` to the `Configuration:`
-
-
-
-Before:
-
-```typescript
-import { Configuration, OpenAIApi } from "openai";
-
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY
-});
-
-const openai = new OpenAIApi(configuration);
-```
-
-
-
-After:
-
-<pre class="language-typescript"><code class="lang-typescript">import { Configuration, OpenAIApi } from "openai";
+<pre class="language-typescript"><code class="lang-typescript">import {Configuration, OpenAIApi} from "openai";
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
+  // Add a basePath to the Configuartion
 <strong>  basePath: "https://oai.hconeai.com/v1",
-</strong>});
+</strong>  {
+    headers: {
+      // Add your Helicone API Key
+<strong>      "Helicone-Auth": "Bearer &#x3C;API_KEY>",
+</strong>    },
+  }
+});
 
 const openai = new OpenAIApi(configuration);
 </code></pre>
@@ -70,37 +71,31 @@ Helpful links:
 * [LangChain+Helicone Typescript Docs](https://hwchase17.github.io/langchainjs/docs/ecosystem/helicone/)
 * [LangChain+Helicone Python Docs](https://langchain.readthedocs.io/en/latest/ecosystem/helicone.html)
 
+### Python
 
-
-(Python) Using env variable
-
-<pre class="language-bash"><code class="lang-bash"><strong>export OPENAI_API_BASE="https://oai.hconeai.com/v1"
-</strong>python3 your_lang_chain_program.py
+<pre class="language-python"><code class="lang-python"><strong>openai.api_base = "https://oai.hconeai.com/v1"
+</strong>
+llm = OpenAI(
+  temperature=0.9,
+  headers={
+<strong>    "Helicone-Auth": "Bearer &#x3C;API_KEY>"
+</strong>  }
+)
 </code></pre>
 
-(Python) Change it within code
+### Typescript
 
-<pre class="language-python"><code class="lang-python">import openai
-<strong>openai.api_base = "https://oai.hconeai.com/v1"
-</strong></code></pre>
-
-(TypeScript) add basepath on the creation of the OpenAI object
-
-```typescript
-const model = new OpenAI(
+<pre class="language-typescript"><code class="lang-typescript">const model = new OpenAI(
   {},
   {
-    basePath: "https://oai.hconeai.com/v1",
+<strong>    basePath: "https://oai.hconeai.com/v1",
+</strong>    baseOptions: {
+      headers: {
+<strong>        "Helicone-Auth": "Bearer &#x3C;API_KEY>"
+</strong>      },
+    },
   }
 );
-```
-{% endtab %}
-
-{% tab title="GPT Index" %}
-Change the base URL:
-
-<pre class="language-bash"><code class="lang-bash"><strong>export OPENAI_API_BASE="https://oai.hconeai.com/v1"
-</strong>python3 your_gpt_index_program.py
 </code></pre>
 {% endtab %}
 {% endtabs %}
