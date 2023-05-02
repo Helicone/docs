@@ -4,7 +4,7 @@
 
 ## ⚡ Quickstart
 
-* [Integrate in less than a minute](quickstart/integrate-in-less-than-a-minute.md)
+* [Integrate in one minute](quickstart/integrate-in-one-minute.md)
 
 ## 💡 Advanced Usage
 
