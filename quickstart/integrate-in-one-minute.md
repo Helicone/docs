@@ -136,9 +136,11 @@ You can also integrate Helicone in Node.js without using any package. Update you
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 <strong>  basePath: "https://oai.hconeai.com/v1",
-</strong>  headers: {
-<strong>    "Helicone-Auth": `Bearer ${process.env.HELICONE_API_KEY}`,
-</strong>  },
+</strong>  baseOptions: {
+    headers: {
+<strong>      "Helicone-Auth": `Bearer ${process.env.HELICONE_API_KEY}`,
+</strong>    },
+  },
 });
 
 const openai = new OpenAIApi(configuration);
