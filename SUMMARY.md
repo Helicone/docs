@@ -15,6 +15,11 @@
 * [Retries](advanced-usage/exponential-backoff-for-rate-limited-requests.md)
 * [Custom rate limits](advanced-usage/custom-rate-limits.md)
 
+## Examples
+
+* [Streaming](examples/streaming.md)
+* [Asynchrony](examples/asynchrony.md)
+
 ## 🛠 How it works
 
 * [Encryption and security](how-it-works/encryption-and-security.md)
