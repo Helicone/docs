@@ -17,9 +17,9 @@
 
 ## Examples
 
-* [Azure-OpenAI](examples/azure-openai.md)
 * [Streaming](examples/streaming.md)
-* [Asynchrony](examples/asynchrony.md)
+* [Async](examples/async.md)
+* [Azure-OpenAI](examples/azure-openai.md)
 
 ## 🛠 How it works
 

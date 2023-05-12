@@ -1,6 +1,6 @@
-# Asynchrony
+# Async
 
-Helicone seamleslly works with asynchronous requests.&#x20;
+Helicone works with asynchronous requests normally.
 
 All you have to do is import `helicone` or import `openai` through the Helicone package and the rest of your code works normally.
 
