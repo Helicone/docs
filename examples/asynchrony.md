@@ -17,7 +17,7 @@ Let's demonstrate how you'd make synchronous or asynchronous requests with the O
 Here, the request is made asynchronously, and the response is not streamed. Note that you'll need to use the `await` keyword when calling `openai.ChatCompletion.acreate`.
 
 ```python
-pythonCopy coderesponse = await openai.ChatCompletion.acreate(
+response = await openai.ChatCompletion.acreate(
     model = 'gpt-3.5-turbo',
     messages = [{
         'role': 'user',
