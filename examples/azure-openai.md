@@ -1,6 +1,6 @@
 # Azure-OpenAI
 
-You can use Helicone just like you would use the OpenAI package for your Azure-OpenAI deployment, and it requires no additional code changes beyond using the OpenAI package with Helicone.
+You can use Helicone with your Azure-OpenAI deployment, and it requires no additional code changes beyond importing the OpenAI package with Helicone.
 
 <pre class="language-python"><code class="lang-python"><strong>from helicone import openai
 </strong>
