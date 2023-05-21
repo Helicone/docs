@@ -1,16 +1,16 @@
 ---
-description: Reduce latency and save cost by caching your requests on our servers!
+description: Reduce latency and save costs by caching on the edge
 ---
 
 # Caching
 
-Caching is done on the edge to ensure the fastest cache hits. We also use Cloudflare cache control that is extremely low latent which make testing and building apps extremely fun!
+Caching, by temporarily storing data closer to the user at the edge, significantly speeds up access time and enhances application performance. This edge deployment ensures low latency, resulting in faster responses and an efficient app development process.
 
-![](<../.gitbook/assets/image (1).png>)
+<figure><img src="../.gitbook/assets/Screen Shot 2023-05-21 at 6.05.03 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Quick start
 
-To get started, set `Helicone-Cache-Enabled` to  `true`
+To get started, just set `Helicone-Cache-Enabled` to `true` in the headers, or use the Python or NPM packages to turn it on via parameters.
 
 {% tabs %}
 {% tab title="Curl" %}
@@ -26,11 +26,22 @@ To get started, set `Helicone-Cache-Enabled` to  `true`
 {% endtab %}
 
 {% tab title="Python" %}
+With the package:
+
+<pre class="language-python"><code class="lang-python">response = openai.Completion.create(
+	model="text-davinci-003",
+	prompt="How do I cache with helicone?",
+<strong>	cache=True,
+</strong>)
+</code></pre>
+
+Without the package:
+
 <pre class="language-python"><code class="lang-python">openai.api_base = "https://oai.hconeai.com/v1"
 
 openai.Completion.create(
     model="text-davinci-003",
-    prompt="How do I enable caching?",
+    prompt="How do I cache with helicone?",
     headers={
 <strong>      "Helicone-Cache-Enabled": "true",
 </strong>    }
@@ -75,8 +86,6 @@ Example of setting the cache  to `2592000 seconds` aka `30 days:`
 ### Cache Buckets
 
 You can increase the size of the cache bucket, so that after the `n'th` request we randomly choose from a previously cached element within the bucket.&#x20;
-
-
 
 Here is an example with a bucket size of `3`
 
