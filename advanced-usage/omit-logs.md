@@ -17,8 +17,7 @@ You can easily omit these by adding the `Helicone-Omit-Request` or `Helicone-Omi
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer YOUR_API_KEY' \
 <strong>  -H 'Helicone-Omit-Request: true' \
-</strong> 
-<strong>  -H 'Helicone-Omit-Response: true' \
+</strong><strong>  -H 'Helicone-Omit-Response: true' \
 </strong> -d '{
     "model": "text-davinci-003",
     "prompt": "How do I enable custom rate limit policies?",
@@ -36,8 +35,7 @@ openai.Completion.create(
     prompt="How do I enable retries?",
     headers={
 <strong>        "Helicone-Omit-Request": "true",
-</strong> 
-<strong>        "Helicone-Omit-Response": "true",
+</strong> <strong>        "Helicone-Omit-Response": "true",
 </strong>    }
 )
 </code></pre>
@@ -53,8 +51,7 @@ const configuration = new Configuration({
   baseOptions: {
     headers: {
 <strong>      "Helicone-Omit-Request": "true",
-</strong>  
-<strong>      "Helicone-Omit-Response": "true",
+</strong><strong>      "Helicone-Omit-Response": "true",
 </strong>    },
   },
 });
