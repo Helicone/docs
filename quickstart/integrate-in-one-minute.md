@@ -272,7 +272,7 @@ res = client._request_as_json(
 
 </code></pre>
 
-This solution is not the cleanest. There is currently an open issue with Anthropics SDK [https://github.com/anthropics/anthropic-sdk-python/issues/28](https://github.com/anthropics/anthropic-sdk-python/issues/28). With a proposed solution here [https://github.com/anthropics/anthropic-sdk-python/pull/39](https://github.com/anthropics/anthropic-sdk-python/pull/39).\
+This solution is not the cleanest. There is currently an open issue with Anthropics SDK [https://github.com/anthropics/anthropic-sdk-python/issues/28](https://github.com/anthropics/anthropic-sdk-python/issues/28). We have a proposed solution here [https://github.com/anthropics/anthropic-sdk-python/pull/39](https://github.com/anthropics/anthropic-sdk-python/pull/39).\
 \
 Please upvote these issues to help us get these changes merged in. \
 
