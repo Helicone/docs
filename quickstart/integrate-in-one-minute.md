@@ -250,7 +250,31 @@ curl --request POST \
 ```
 {% endtab %}
 
-{% tab title="Second Tab" %}
+{% tab title="Python" %}
+<pre class="language-python"><code class="lang-python">import anthropic
+client = anthropic.Client(
+    api_key="&#x3C;Anthropic API Key>",
+<strong>    api_url="https://anthropic.hconeai.com/v1"
+</strong>)
+res = client._request_as_json(
+    "post",
+    "v1/complete",
+    params={
+        "prompt": f"{anthropic.HUMAN_PROMPT} How many toes do dogs have?{anthropic.AI_PROMPT}",
+        "stop_sequences": [anthropic.HUMAN_PROMPT],
+        "model": "claude-v1",
+        "max_tokens_to_sample": 300,
+    },
+    headers={
+<strong>        "Helicone-Auth": "Bearer &#x3C;HELICONE_API_KEY>"
+</strong>    }
+)
+
+</code></pre>
+
+This solution is not the cleanest. There is currently an open issue with Anthropics SDK [https://github.com/anthropics/anthropic-sdk-python/issues/28](https://github.com/anthropics/anthropic-sdk-python/issues/28). With a proposed solution here [https://github.com/anthropics/anthropic-sdk-python/pull/39](https://github.com/anthropics/anthropic-sdk-python/pull/39).\
+\
+Please upvote these issues to help us get these changes merged in. \
 
 {% endtab %}
 {% endtabs %}
