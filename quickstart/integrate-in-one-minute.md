@@ -1,12 +1,14 @@
 ---
 description: >-
-  However you're using OpenAI, get instant observability into your usage,
+  However you're using your LLM, get instant observability into your usage,
   errors, rate limits, and more
 ---
 
 # Integrate in one minute
 
 First, claim your `HELICONE_API_KEY` by signing up [here](https://www.helicone.ai/), or if you are already signed up, login and go to the [Keys page](https://www.helicone.ai/keys).&#x20;
+
+## OpenAI
 
 {% tabs %}
 {% tab title="Curl" %}
@@ -26,6 +28,29 @@ POST https://oai.hconeai.com/v1
 
 ```
 "Helicone-Auth": "Bearer HELICONE_API_KEY"
+```
+
+Example curl command:
+
+```bash
+HELICONE_AUTH=sk...
+OPENAI_API=sk...
+ccurl --request POST \
+  --url https://oai.hconeai.com/v1/chat/completions \
+  --header 'Authorization: Bearer '$OPENAI_API \
+  --header 'Content-Type: application/json' \
+  --header 'Helicone-Auth: Bearer '$HELICONE_AUTH \
+  --data '{
+        "model": "gpt-3.5-turbo",
+        "messages": [
+                {
+                        "role": "system",
+                        "content": "Say Hello!"
+                }
+        ],
+        "temperature": 1,
+        "max_tokens": 10
+}'
 ```
 {% endtab %}
 
@@ -179,6 +204,54 @@ llm = OpenAI(
   }
 );
 </code></pre>
+{% endtab %}
+{% endtabs %}
+
+## Anthropic (Claude)
+
+{% tabs %}
+{% tab title="Curl" %}
+1. **Replace the Anthropic base url**
+
+```url
+POST https://api.anthropic.com
+```
+
+with Helicone's
+
+```
+POST https://anthropic.hconeai.com
+```
+
+2. **Add the Helicone auth header to the request**
+
+```
+"Helicone-Auth": "Bearer HELICONE_API_KEY"
+```
+
+Example curl command
+
+```bash
+HELICONE_AUTH=sk...
+ANTHROPIC_API=sk...
+curl --request POST \
+  --url https://api.anthropic.com/v1/complete \
+  --header 'Content-Type: application/json' \
+  --header 'Helicone-Auth: Bearer '$HELICONE_AUTH \
+  --header 'x-api-key: '$ANTHROPIC_API \
+  --data '{
+	"prompt": "\n\nHuman: Tell me a haiku about trees\n\nAssistant:",
+	"model": "claude-v1-100k",
+	"max_tokens_to_sample": 300,
+	"stop_sequences": [
+		"\n\nHuman:"
+	]
+}'
+```
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
 {% endtab %}
 {% endtabs %}
 
