@@ -1,32 +1,33 @@
 # Table of contents
 
-- [Helicone](README.md)
+* [Helicone](README.md)
 
 ## ⚡ Quickstart
 
-- [Integrate in one minute](quickstart/integrate-in-one-minute.md)
+* [Integrate in one minute](quickstart/integrate-in-one-minute.md)
 
 ## ⚙ Advanced Usage
 
-- [Custom properties](advanced-usage/custom-properties.md)
-- [User metrics](advanced-usage/user-metrics.md)
-- [Templated prompts](advanced-usage/templated-prompts.md)
-- [Caching](advanced-usage/caching.md)
-- [Retries](advanced-usage/exponential-backoff-for-rate-limited-requests.md)
-- [Custom rate limits](advanced-usage/custom-rate-limits.md)
-- [Omit Logs](advanced-usage/omit-logs.md)
+* [Custom properties](advanced-usage/custom-properties.md)
+* [User metrics](advanced-usage/user-metrics.md)
+* [Templated prompts](advanced-usage/templated-prompts.md)
+* [Caching](advanced-usage/caching.md)
+* [Retries](advanced-usage/exponential-backoff-for-rate-limited-requests.md)
+* [Custom rate limits](advanced-usage/custom-rate-limits.md)
+* [Omit Logs](advanced-usage/omit-logs.md)
 
 ## 💡 Examples
 
-- [Streaming](examples/streaming.md)
-- [Async](examples/asynchrony.md)
-- [Azure-OpenAI](examples/azure-openai.md)
+* [Streaming](examples/streaming.md)
+* [Async](examples/asynchrony.md)
+* [Azure-OpenAI](examples/azure-openai.md)
 
 ## 🛠 How it works
 
-- [Encryption and security](how-it-works/encryption-and-security.md)
-- [Latency benchmarks](how-it-works/latency-benchmarks.md)
+* [Encryption and security](how-it-works/encryption-and-security.md)
+* [Latency benchmarks](how-it-works/latency-benchmarks.md)
+* [How we calculate costs](how-it-works/how-we-calculate-costs.md)
 
 ## 🌐 GraphQL API
 
-- [Getting started](graphql-api/getting-started.md)
+* [Getting started](graphql-api/getting-started.md)
